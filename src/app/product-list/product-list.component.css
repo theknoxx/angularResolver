@@ -1,0 +1,21 @@
+.description, .card-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#productImage img{
+    scale: 0.9;
+    padding: 20px;
+    height: 350px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.5s;
+}
+#productImage img:hover{
+    scale: 1;
+    transition: 0.5s;
+}
+#btns, .card .btn{
+    height: 50px;
+    border-radius: 0;
+}

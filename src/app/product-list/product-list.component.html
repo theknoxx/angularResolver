@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3 p-4" *ngFor="let product of products">
+                <div class="card" id="productImage" data-toggle="tooltip" data-placement="top" [title]="product.title">
+                  <img class="card-img-top img-fluid" [src]="product.image"/>
+                  <div class="card-body">
+                    <h3 class="card-title">{{product.title}}</h3>
+                    <p class="price">Price = ${{product.price}}</p>
+                    <p class="description">{{product.description}}</p>
+                  </div>
+                  <div class="cart-footer">
+                    <div class="btn-group w-100" id="btns">
+                        <button class="btn btn-info" type="button">Wishlist</button>
+                        <button class="btn btn-success" type="button">Add to Cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+</div>
