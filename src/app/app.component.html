@@ -1,8 +1,37 @@
-<div class="w-100 text-center">
+<!-- <div class="w-100 text-center">
     <div class="btn-group p-5">
         <button class="btn btn-outline-primary" [ngClass]="{'btn-primary text-white': currentPath==='/home'}" routerLink="/home">Home</button>
         <button class="btn btn-outline-success" [ngClass]="{'btn-success text-white': currentPath==='/productList'}" routerLink="/productList">Product List</button>
         <button class="btn btn-outline-info" [ngClass]="{'btn-info text-white': currentPath==='/about'}" routerLink="/about">About</button>  
     </div>
 </div>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+
+
+<div *ngIf="loading" id="myModal" class="modal">
+    <div class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="content" role="main">
+    <div class="card-container">
+      <a class="card" routerLink="/home" [ngClass]="{'selected': currentPath==='/home'}">
+        <span>Home</span>
+      </a>
+      <a class="card" routerLink="/productList" [ngClass]="{'selected': currentPath==='/productList'}">
+        <span>Products</span>
+      </a>
+      <a class="card" routerLink="/about" [ngClass]="{'selected': currentPath==='/about'}">
+        <span>About</span>
+      </a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  

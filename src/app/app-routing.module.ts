@@ -8,7 +8,7 @@ import { ProductsResolverService } from './shared/products-resolver.service';
 const routes: Routes = [  
   {path:'',component:HomeComponent},
   {path:'home',component:HomeComponent},
-  {path:'productList',component:ProductListComponent,resolve:ProductsResolverService},
+  {path:'productList',component:ProductListComponent,resolve:{ products: ProductsResolverService}},
   {path:'about',component: AboutComponent}
 ];
 
