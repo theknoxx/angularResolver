@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
     );
     this.activatedRoute.data.subscribe(res =>{
       console.log('PRODUCT FETCHING', res);
-      this.products = res
+      this.products = res['products']
       console.log('PRODUCT FETCHED');
 })
   }

@@ -10,7 +10,7 @@ export class ServiceService {
   
   constructor(private http: HttpClient) { }
 
-  getProducts(){
+  getProducts(){    
     return this.http.get(this.url+'products')
   }
 }
